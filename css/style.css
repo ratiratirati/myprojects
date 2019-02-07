@@ -1,0 +1,127 @@
+body{
+    background-image: url("../img/back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.login_form img{
+    width: 150px;
+    height:150px;
+    border-radius: 100%;
+    margin-top: 20px;
+}
+
+.login_form{
+    margin: auto;
+    width: 450px;
+    height: 500px;
+    background-color: rgba(0,0,0,0.6);
+    text-align: center;
+    margin-top: 6%;
+}
+
+.login_form input{
+    width: 70%;
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 10px;
+    font-size: 17px;
+    outline: none;
+    border: none;
+    font-family: 'BPG Algeti';
+
+}
+
+
+.login_form button{
+    width: 70%;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 17px;
+    outline: none;
+    border: none;
+    background-color: orangered;
+    color: white;
+    font-family: 'BPG Algeti';
+
+}
+
+.login_form a{
+    color: white;
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'BPG Algeti';
+
+}
+
+
+.login_form img{
+    width: 150px;
+    height:150px;
+    border-radius: 100%;
+    margin-top: 20px;
+}
+
+.register_form{
+    padding-top: 5%;
+    margin: auto;
+    width: 450px;
+    height: 450px;
+    background-color: rgba(0,0,0,0.6);
+    text-align: center;
+    margin-top: 6%;
+}
+
+.register_form input{
+    width: 70%;
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 10px;
+    font-size: 17px;
+    outline: none;
+    border: none;
+    font-family: 'BPG Algeti';
+
+}
+
+
+.register_form button{
+    width: 70%;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 17px;
+    outline: none;
+    border: none;
+    background-color: orangered;
+    color: white;
+    font-family: 'BPG Algeti';
+
+}
+
+.register_form a{
+    color: white;
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'BPG Algeti';
+
+}
+
+
+.msg{
+    font-size: 17px;
+    color: white;
+    font-family: 'BPG Arial';
+
+}
+
+
+.error{
+    font-size: 17px;
+    color: red;
+    font-family: 'BPG Arial';
+
+}

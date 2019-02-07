@@ -22,6 +22,7 @@ include ('proces.php');
     <button name="register">რეგისტრაცია</button>
     <br>
     <a href="index.php">შესვლა</a>
+    <br>
     <div class="msg">
     <?php echo $msg;?>
     </div>

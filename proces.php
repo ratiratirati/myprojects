@@ -22,6 +22,14 @@ if(isset($_POST['register'])){
         array_push($errors,'პაროლის ველი ცარიელია');
     }
 
+    if($password != $password_2){
+        array_push($errors,'პაროლები არ ემთვევა');
+    }
+
+    if(!empty($password and strlen($password) < 8)){
+        array_push($errors,'პაროლი უნდა შედგებოსეს 8 ციფრისგან');
+    }
+
 // თუ შეცდომების რაოდენობა 0 ის ტოლია წარმატებით მოხდეს რეგისტრაცია
     if(count($errors) == 0 ){
         //პაროლის დაშიფრვა md5

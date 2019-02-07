@@ -1,5 +1,8 @@
 <?php
 
+// სესიის ჩართვა
+session_start();
+
 // მონაცემთა ბაზასთან დაკავშირება
 $con  = mysqli_connect('localhost','root','','register');
 

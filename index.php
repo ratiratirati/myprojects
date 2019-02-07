@@ -11,6 +11,8 @@ include ('proces.php');
 ?>
 <div class="login_form">
 <form method="post" action="index.php">
+    <img src="img/user.jpg">
+    <br>
     <input type="text" name="username" placeholder="მომხმარებელი">
     <br>
     <input type="password" name="password" placeholder="პაროლი">
@@ -19,6 +21,7 @@ include ('proces.php');
     <br>
     <a href="register.php">რეგისტრაცია</a>
     <div class="error">
+    <br>
     <?php include ('error.php')?>
     </div>
 </form>
