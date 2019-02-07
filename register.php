@@ -1,6 +1,6 @@
 <html>
 <head>
-<meta charset="utf-8">
+    <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/fonts.css">
 </head>
@@ -9,15 +9,22 @@
 include ('server.php');
 include ('proces.php');
 ?>
-<div class="login_form">
-<form method="post" action="index.php">
+<div class="register_form">
+<form method="post" action="register.php">
     <input type="text" name="username" placeholder="მომხმარებელი">
+    <br>
+    <input type="text" name="email" placeholder="მეილი">
     <br>
     <input type="password" name="password" placeholder="პაროლი">
     <br>
-    <button name="login">შესვლა</button>
+    <input type="password" name="password_2" placeholder="გაიმეორეთ პაროლი">
     <br>
-    <a href="register.php">რეგისტრაცია</a>
+    <button name="register">რეგისტრაცია</button>
+    <br>
+    <a href="index.php">შესვლა</a>
+    <div class="msg">
+    <?php echo $msg;?>
+    </div>
     <div class="error">
     <?php include ('error.php')?>
     </div>
