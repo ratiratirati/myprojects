@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    width: auto;
+    height: 70px;
+    background-color: #563d7c;
+}
+
+.header p{
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+}
+
+
+.siaxle{
+    text-align: center;
+    margin-top: 10%;
+}
+
+
+.siaxle textarea{
+    width: 40%;
+    height: 190px;
+    padding-left: 10px;
+    font-size: 17px;
+    font-family: 'BPG Boxo';
+
+}
+
+.siaxle button{
+    width: 40%;
+    height: 50px;
+    font-size: 17px;
+    font-family: 'BPG Boxo';
+    color: white;
+    background-color: orangered;
+    outline: none;
+    border: none;
+    margin-top: 10px;
+}
+
+.msg{
+    margin-top: 3%;
+    font-size: 17px;
+    font-family: 'BPG Arial';
+
+}
+
+
+.error{
+    font-size: 17px;
+    color: red;
+    font-family: 'BPG Arial';
+
+}

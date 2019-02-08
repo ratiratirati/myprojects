@@ -8,6 +8,16 @@
 <?php
 include ('server.php');
 include ('proces.php');
+if(empty($_SESSION['username'])){
+    header('location:index.php');
+}
+
+if(isset($_GET['logout'])){
+    session_destroy();
+    unset($_SESSION['username']);
+    header('location:index.php');
+
+}
 ?>
 <div class="register_form">
 <form method="post" action="register.php">

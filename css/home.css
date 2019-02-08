@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    width: auto;
+    height: 70px;
+    background-color: #563d7c;
+}
+
+.header p{
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+}

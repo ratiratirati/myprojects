@@ -76,4 +76,19 @@ if(isset($_POST['login'])){
 }
 
 
+if(isset($_POST['add'])){
+    $siaxle = mysqli_real_escape_string($con,$_POST['siaxle']);
+
+    if(empty($siaxle)){
+        array_push($errors,'');
+    }
+
+    if(count($errors) == 0 ){
+        $sql = "INSERT INTO siaxleebi (siaxle) VALUES ('$siaxle')";
+        if(mysqli_query($con,$sql)){
+            $msg = "სიახლე წარმატებით დაემატა";
+        }
+    }
+}
+
 ?>

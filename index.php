@@ -19,7 +19,7 @@ include ('proces.php');
     <br>
     <button name="login">შესვლა</button>
     <br>
-    <a href="register.php">რეგისტრაცია</a>
+    <!--<a href="register.php">რეგისტრაცია</a>-->
     <div class="error">
     <br>
     <?php include ('error.php')?>
