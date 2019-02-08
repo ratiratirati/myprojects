@@ -35,12 +35,28 @@ if(isset($_GET['logout'])){
         </div>
     </div>
 </div>
+<form method="post" action="admin.php">
 <div class="siaxle">
     <form method="post" action="admin.php">
     <textarea name="siaxle"></textarea>
     <br>
     <button name="add">გამოქვეყნება</button>
     <br>
+    <button name="deleteall">ყველას წაშლა</button>
+    <br>
+    <div class="gamoqveynebuli">
+        <?php
+
+        $sql="SELECT COUNT(id) AS sia FROM siaxleebi";
+        $res = mysqli_query($con,$sql);
+        if(mysqli_num_rows($res)){
+            $row = mysqli_fetch_assoc($res);
+            echo 'გამოქვეყნებულია: ( '.$row['sia'].' )';
+
+        }
+
+        ?>
+    </div>
     <div class="msg">
         <?php echo $msg;?>
     </div>
@@ -49,6 +65,7 @@ if(isset($_GET['logout'])){
     </div>
     </form>
 </div>
+</form>
 <script>
 
     setTimeout(function() {

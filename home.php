@@ -76,7 +76,7 @@ if(isset($_GET['logout'])){
 <script>
     $(document).ready(function(){
         $("#num").click(function(){
-            $(".siaxleebi").slideToggle();
+            $(".siaxleebi").slideToggle(500);
         });
     });
 

@@ -104,4 +104,9 @@ if(isset($_POST['delete'])){
     }
 }
 
+if(isset($_POST['deleteall'])){
+    $sql = "DELETE FROM siaxleebi";
+    mysqli_query($con,$sql);
+}
+
 ?>
