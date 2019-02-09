@@ -7,6 +7,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 <?php
@@ -26,20 +27,36 @@ if(isset($_GET['logout'])){
 ?>
 <div class="header">
     <div class="dropdown float-right mr-5 mt-3">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <?php echo $_SESSION['username'];?>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <li><a href="admin.php?logout='1'">გამოსვლა</a></li>
+            <a class="dropdown-item" href="admin.php?logout='1'">გამოსვლა</a>
         </div>
     </div>
 </div>
+<form method="post" action="admin.php">
 <div class="siaxle">
     <form method="post" action="admin.php">
     <textarea name="siaxle"></textarea>
     <br>
     <button name="add">გამოქვეყნება</button>
     <br>
+    <button name="deleteall">ყველას წაშლა</button>
+    <br>
+    <div class="gamoqveynebuli">
+        <?php
+
+        $sql="SELECT COUNT(id) AS sia FROM siaxleebi";
+        $res = mysqli_query($con,$sql);
+        if(mysqli_num_rows($res)){
+            $row = mysqli_fetch_assoc($res);
+            echo 'გამოქვეყნებულია: ( '.$row['sia'].' )';
+
+        }
+
+        ?>
+    </div>
     <div class="msg">
         <?php echo $msg;?>
     </div>
@@ -48,5 +65,12 @@ if(isset($_GET['logout'])){
     </div>
     </form>
 </div>
+</form>
+<script>
+
+    setTimeout(function() {
+        $('.msg').fadeOut('slow');
+    }, 1500);
+</script>
 </body>
 </html>

@@ -75,6 +75,9 @@ if(isset($_POST['login'])){
     }
 }
 
+date_default_timezone_set('Asia/tbilisi');
+$t=date('h:i:s');
+$d=date('Y-m-d');
 
 if(isset($_POST['add'])){
     $siaxle = mysqli_real_escape_string($con,$_POST['siaxle']);
@@ -84,11 +87,26 @@ if(isset($_POST['add'])){
     }
 
     if(count($errors) == 0 ){
-        $sql = "INSERT INTO siaxleebi (siaxle) VALUES ('$siaxle')";
+        $sql = "INSERT INTO siaxleebi (siaxle,saati,ricxvi) VALUES ('$siaxle','$t','$d')";
         if(mysqli_query($con,$sql)){
-            $msg = "სიახლე წარმატებით დაემატა";
+            $msg = "სიახლე წარმატებით დაემატა<br><img src='img/corect.gif' style='width: 70px; margin-top: 10px;'>";
         }
     }
+}
+
+
+if(isset($_POST['delete'])){
+    $sql = "DELETE FROM siaxleebi WHERE id='".$_POST['deleteid']."'";
+    if(mysqli_query($con,$sql)){
+        echo '<div class="alert alert-danger" role="alert">
+ წარმატებით წაიშალა !!!
+</div>';
+    }
+}
+
+if(isset($_POST['deleteall'])){
+    $sql = "DELETE FROM siaxleebi";
+    mysqli_query($con,$sql);
 }
 
 ?>
